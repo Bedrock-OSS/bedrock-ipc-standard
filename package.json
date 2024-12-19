@@ -1,0 +1,52 @@
+{
+  "name": "@bedrock-oss/bedrock-ipc-standard",
+  "version": "0.0.1",
+  "description": "A set of standardized types and functions for interacting with other Minecraft Bedrock Edition add-ons.", 
+  "keywords": [
+    "minecraft",
+    "bedrock",
+    "addon",
+    "script-api",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bedrock-OSS/bedrock-ipc-standard.git"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "jest",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "Bedrock-OSS",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.6",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "tsup": "^7.2.0",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
+    "@typescript-eslint/parser": "^7.1.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-minecraft-linting": "^1.1.0"
+  },
+  "dependencies": {
+    "@minecraft/server": "beta",
+    "@minecraft/common": "latest"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
